@@ -201,12 +201,12 @@ const Login = () => {
 ## Unoptimized
 
 ```
-asset output.js 11.3 KiB [emitted] (name: main)
+asset output.js 11.4 KiB [emitted] (name: main)
 asset pages_Login_js.output.js 2.79 KiB [emitted]
 asset pages_Dashboard_js.output.js 2.75 KiB [emitted]
-chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.48 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.51 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.48 KiB 8 modules
+  runtime modules 5.51 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 48 bytes [built] [code generated]
     [no exports used]
@@ -233,12 +233,12 @@ webpack X.X.X compiled successfully
 ## Production mode
 
 ```
-asset output.js 2.51 KiB [emitted] [minimized] (name: main)
+asset output.js 2.57 KiB [emitted] [minimized] (name: main)
 asset pages_Dashboard_js.output.js 444 bytes [emitted] [minimized]
 asset pages_Login_js.output.js 438 bytes [emitted] [minimized]
-chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.48 KiB (runtime) [entry] [rendered]
+chunk (runtime: main) output.js (main) 208 bytes (javascript) 5.51 KiB (runtime) [entry] [rendered]
   > ./example.js main
-  runtime modules 5.48 KiB 8 modules
+  runtime modules 5.51 KiB 8 modules
   dependent modules 160 bytes [dependent] 1 module
   ./example.js 48 bytes [built] [code generated]
     [no exports used]
