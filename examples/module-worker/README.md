@@ -165,17 +165,17 @@ export const add = (content, from) => {
 ``` js
 /************************************************************************/
 /******/ // The module cache
-/******/ var __webpack_module_cache__ = {};
+/******/ const __webpack_module_cache__ = {};
 /******/ 
 /******/ // The require function
 /******/ function __webpack_require__(moduleId) {
 /******/ 	// Check if module is in cache
-/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 	if (cachedModule !== undefined) {
 /******/ 		return cachedModule.exports;
 /******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
-/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 	const module = __webpack_module_cache__[moduleId] = {
 /******/ 		// no module.id needed
 /******/ 		// no module.loaded needed
 /******/ 		exports: {}
@@ -184,7 +184,7 @@ export const add = (content, from) => {
 /******/ 	// Execute the module function
 /******/ 	if (!(moduleId in __webpack_modules__)) {
 /******/ 		delete __webpack_module_cache__[moduleId];
-/******/ 		var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 		const e = new Error("Cannot find module '" + moduleId + "'");
 /******/ 		e.code = 'MODULE_NOT_FOUND';
 /******/ 		throw e;
 /******/ 	}
@@ -262,12 +262,12 @@ export const add = (content, from) => {
 /******/ 	// object to store loaded and loading chunks
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, Promise] = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
+/******/ 	const installedChunks = {
 /******/ 		792: 0
 /******/ 	};
 /******/ 	
-/******/ 	var installChunk = (data) => {
-/******/ 		var {__webpack_esm_ids__, __webpack_esm_modules__, __webpack_esm_runtime__} = data;
+/******/ 	const installChunk = (data) => {
+/******/ 		let {__webpack_esm_ids__, __webpack_esm_modules__, __webpack_esm_runtime__} = data;
 /******/ 		// add "modules" to the modules object,
 /******/ 		// then flag all "ids" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0;
@@ -289,7 +289,7 @@ export const add = (content, from) => {
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
 /******/ 			// import() chunk loading for javascript
-/******/ 			var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 			let installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
 /******/ 			if(installedChunkData !== 0) { // 0 means "already installed".
 /******/ 	
 /******/ 				// a Promise means "currently loading".
@@ -298,11 +298,11 @@ export const add = (content, from) => {
 /******/ 				} else {
 /******/ 					if(true) { // all chunks have JS
 /******/ 						// setup Promise in chunk cache
-/******/ 						var promise = import(__webpack_require__.p + __webpack_require__.u(chunkId)).then(installChunk, (e) => {
+/******/ 						let promise = import(__webpack_require__.p + __webpack_require__.u(chunkId)).then(installChunk, (e) => {
 /******/ 							if(installedChunks[chunkId] !== 0) installedChunks[chunkId] = undefined;
 /******/ 							throw e;
 /******/ 						});
-/******/ 						var promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])
+/******/ 						promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])
 /******/ 						promises.push(installedChunkData[1] = promise);
 /******/ 					}
 /******/ 				}
@@ -327,7 +327,7 @@ export const add = (content, from) => {
 </details>
 
 ``` js
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 /*!********************!*\
   !*** ./example.js ***!
   \********************/
@@ -443,17 +443,17 @@ fibWorker.onmessage = event => {
 ``` js
 /************************************************************************/
 /******/ // The module cache
-/******/ var __webpack_module_cache__ = {};
+/******/ const __webpack_module_cache__ = {};
 /******/ 
 /******/ // The require function
 /******/ function __webpack_require__(moduleId) {
 /******/ 	// Check if module is in cache
-/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 	if (cachedModule !== undefined) {
 /******/ 		return cachedModule.exports;
 /******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
-/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 	const module = __webpack_module_cache__[moduleId] = {
 /******/ 		// no module.id needed
 /******/ 		// no module.loaded needed
 /******/ 		exports: {}
@@ -462,7 +462,7 @@ fibWorker.onmessage = event => {
 /******/ 	// Execute the module function
 /******/ 	if (!(moduleId in __webpack_modules__)) {
 /******/ 		delete __webpack_module_cache__[moduleId];
-/******/ 		var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 		const e = new Error("Cannot find module '" + moduleId + "'");
 /******/ 		e.code = 'MODULE_NOT_FOUND';
 /******/ 		throw e;
 /******/ 	}
@@ -538,12 +538,12 @@ fibWorker.onmessage = event => {
 /******/ 	// object to store loaded and loading chunks
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, Promise] = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
+/******/ 	const installedChunks = {
 /******/ 		377: 0
 /******/ 	};
 /******/ 	
-/******/ 	var installChunk = (data) => {
-/******/ 		var {__webpack_esm_ids__, __webpack_esm_modules__, __webpack_esm_runtime__} = data;
+/******/ 	const installChunk = (data) => {
+/******/ 		let {__webpack_esm_ids__, __webpack_esm_modules__, __webpack_esm_runtime__} = data;
 /******/ 		// add "modules" to the modules object,
 /******/ 		// then flag all "ids" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0;
@@ -565,7 +565,7 @@ fibWorker.onmessage = event => {
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
 /******/ 			// import() chunk loading for javascript
-/******/ 			var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 			let installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
 /******/ 			if(installedChunkData !== 0) { // 0 means "already installed".
 /******/ 	
 /******/ 				// a Promise means "currently loading".
@@ -574,11 +574,11 @@ fibWorker.onmessage = event => {
 /******/ 				} else {
 /******/ 					if(true) { // all chunks have JS
 /******/ 						// setup Promise in chunk cache
-/******/ 						var promise = import(__webpack_require__.p + __webpack_require__.u(chunkId)).then(installChunk, (e) => {
+/******/ 						let promise = import(__webpack_require__.p + __webpack_require__.u(chunkId)).then(installChunk, (e) => {
 /******/ 							if(installedChunks[chunkId] !== 0) installedChunks[chunkId] = undefined;
 /******/ 							throw e;
 /******/ 						});
-/******/ 						var promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])
+/******/ 						promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])
 /******/ 						promises.push(installedChunkData[1] = promise);
 /******/ 					}
 /******/ 				}
@@ -603,7 +603,7 @@ fibWorker.onmessage = event => {
 </details>
 
 ``` js
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 /*!************************!*\
   !*** ./chat-worker.js ***!
   \************************/
@@ -632,7 +632,7 @@ onconnect = function (e) {
 ```
 
 ```javascript
-var e,o,t={},r={};function s(e){var o=r[e];if(void 0!==o)return o.exports;var n=r[e]={exports:{}};return t[e](n,n.exports,s),n.exports}s.m=t,s.d=(e,o)=>{for(var t in o)s.o(o,t)&&!s.o(e,t)&&Object.defineProperty(e,t,{enumerable:!0,get:o[t]})},s.f={},s.e=e=>Promise.all(Object.keys(s.f).reduce((o,t)=>(s.f[t](e,o),o),[])),s.u=e=>e+".js",s.o=(e,o)=>Object.prototype.hasOwnProperty.call(e,o),s.p="/dist/",e={377:0},o=o=>{var t,r,{__webpack_esm_ids__:n,__webpack_esm_modules__:a,__webpack_esm_runtime__:i}=o,c=0;for(t in a)s.o(a,t)&&(s.m[t]=a[t]);for(i&&i(s);c<n.length;c++)r=n[c],s.o(e,r)&&e[r]&&e[r][0](),e[n[c]]=0},s.f.j=(t,r)=>{var n=s.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[1]);else{var a=import(s.p+s.u(t)).then(o,o=>{throw 0!==e[t]&&(e[t]=void 0),o});a=Promise.race([a,new Promise(o=>n=e[t]=[o])]),r.push(n[1]=a)}},onconnect=function(e){for(const o of e.ports)o.onmessage=async e=>{const t=e.data;switch(t.type){case"message":const{add:e}=await s.e(936).then(s.bind(s,936));e(t.content,t.from);case"history":const{history:r}=await s.e(936).then(s.bind(s,936));o.postMessage({type:"history",history:r})}}};
+var e={};const t={};function o(s){const r=t[s];if(void 0!==r)return r.exports;const n=t[s]={exports:{}};return e[s](n,n.exports,o),n.exports}o.m=e,o.d=(e,t)=>{for(var s in t)o.o(t,s)&&!o.o(e,s)&&Object.defineProperty(e,s,{enumerable:!0,get:t[s]})},o.f={},o.e=e=>Promise.all(Object.keys(o.f).reduce((t,s)=>(o.f[s](e,t),t),[])),o.u=e=>e+".js",o.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),o.p="/dist/",(()=>{const e={377:0},t=t=>{let{__webpack_esm_ids__:s,__webpack_esm_modules__:r,__webpack_esm_runtime__:n}=t;var i,c,a=0;for(i in r)o.o(r,i)&&(o.m[i]=r[i]);for(n&&n(o);a<s.length;a++)c=s[a],o.o(e,c)&&e[c]&&e[c][0](),e[s[a]]=0};o.f.j=(s,r)=>{let n=o.o(e,s)?e[s]:void 0;if(0!==n)if(n)r.push(n[1]);else{let i=import(o.p+o.u(s)).then(t,t=>{throw 0!==e[s]&&(e[s]=void 0),t});i=Promise.race([i,new Promise(t=>n=e[s]=[t])]),r.push(n[1]=i)}}})(),onconnect=function(e){for(const t of e.ports)t.onmessage=async e=>{const s=e.data;switch(s.type){case"message":const{add:e}=await o.e(936).then(o.bind(o,936));e(s.content,s.from);case"history":const{history:r}=await o.e(936).then(o.bind(o,936));t.postMessage({type:"history",history:r})}}};
 ```
 
 # dist/workers/fibonacci.js
@@ -646,17 +646,17 @@ var e,o,t={},r={};function s(e){var o=r[e];if(void 0!==o)return o.exports;var n=
 ``` js
 /************************************************************************/
 /******/ // The module cache
-/******/ var __webpack_module_cache__ = {};
+/******/ const __webpack_module_cache__ = {};
 /******/ 
 /******/ // The require function
 /******/ function __webpack_require__(moduleId) {
 /******/ 	// Check if module is in cache
-/******/ 	var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 	const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 	if (cachedModule !== undefined) {
 /******/ 		return cachedModule.exports;
 /******/ 	}
 /******/ 	// Create a new module (and put it into the cache)
-/******/ 	var module = __webpack_module_cache__[moduleId] = {
+/******/ 	const module = __webpack_module_cache__[moduleId] = {
 /******/ 		// no module.id needed
 /******/ 		// no module.loaded needed
 /******/ 		exports: {}
@@ -665,7 +665,7 @@ var e,o,t={},r={};function s(e){var o=r[e];if(void 0!==o)return o.exports;var n=
 /******/ 	// Execute the module function
 /******/ 	if (!(moduleId in __webpack_modules__)) {
 /******/ 		delete __webpack_module_cache__[moduleId];
-/******/ 		var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 		const e = new Error("Cannot find module '" + moduleId + "'");
 /******/ 		e.code = 'MODULE_NOT_FOUND';
 /******/ 		throw e;
 /******/ 	}
@@ -741,12 +741,12 @@ var e,o,t={},r={};function s(e){var o=r[e];if(void 0!==o)return o.exports;var n=
 /******/ 	// object to store loaded and loading chunks
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// [resolve, Promise] = chunk loading, 0 = chunk loaded
-/******/ 	var installedChunks = {
+/******/ 	const installedChunks = {
 /******/ 		721: 0
 /******/ 	};
 /******/ 	
-/******/ 	var installChunk = (data) => {
-/******/ 		var {__webpack_esm_ids__, __webpack_esm_modules__, __webpack_esm_runtime__} = data;
+/******/ 	const installChunk = (data) => {
+/******/ 		let {__webpack_esm_ids__, __webpack_esm_modules__, __webpack_esm_runtime__} = data;
 /******/ 		// add "modules" to the modules object,
 /******/ 		// then flag all "ids" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0;
@@ -768,7 +768,7 @@ var e,o,t={},r={};function s(e){var o=r[e];if(void 0!==o)return o.exports;var n=
 /******/ 	
 /******/ 	__webpack_require__.f.j = (chunkId, promises) => {
 /******/ 			// import() chunk loading for javascript
-/******/ 			var installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
+/******/ 			let installedChunkData = __webpack_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;
 /******/ 			if(installedChunkData !== 0) { // 0 means "already installed".
 /******/ 	
 /******/ 				// a Promise means "currently loading".
@@ -777,11 +777,11 @@ var e,o,t={},r={};function s(e){var o=r[e];if(void 0!==o)return o.exports;var n=
 /******/ 				} else {
 /******/ 					if(true) { // all chunks have JS
 /******/ 						// setup Promise in chunk cache
-/******/ 						var promise = import(__webpack_require__.p + __webpack_require__.u(chunkId)).then(installChunk, (e) => {
+/******/ 						let promise = import(__webpack_require__.p + __webpack_require__.u(chunkId)).then(installChunk, (e) => {
 /******/ 							if(installedChunks[chunkId] !== 0) installedChunks[chunkId] = undefined;
 /******/ 							throw e;
 /******/ 						});
-/******/ 						var promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])
+/******/ 						promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])
 /******/ 						promises.push(installedChunkData[1] = promise);
 /******/ 					}
 /******/ 				}
@@ -806,7 +806,7 @@ var e,o,t={},r={};function s(e){var o=r[e];if(void 0!==o)return o.exports;var n=
 </details>
 
 ``` js
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 /*!***********************!*\
   !*** ./fib-worker.js ***!
   \***********************/
@@ -820,7 +820,7 @@ onmessage = async event => {
 ```
 
 ```javascript
-var e,r,o={},s={};function t(e){var r=s[e];if(void 0!==r)return r.exports;var a=s[e]={exports:{}};return o[e](a,a.exports,t),a.exports}t.m=o,t.d=(e,r)=>{for(var o in r)t.o(r,o)&&!t.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:r[o]})},t.f={},t.e=e=>Promise.all(Object.keys(t.f).reduce((r,o)=>(t.f[o](e,r),r),[])),t.u=e=>e+".js",t.o=(e,r)=>Object.prototype.hasOwnProperty.call(e,r),t.p="/dist/",e={721:0},r=r=>{var o,s,{__webpack_esm_ids__:a,__webpack_esm_modules__:i,__webpack_esm_runtime__:n}=r,p=0;for(o in i)t.o(i,o)&&(t.m[o]=i[o]);for(n&&n(t);p<a.length;p++)s=a[p],t.o(e,s)&&e[s]&&e[s][0](),e[a[p]]=0},t.f.j=(o,s)=>{var a=t.o(e,o)?e[o]:void 0;if(0!==a)if(a)s.push(a[1]);else{var i=import(t.p+t.u(o)).then(r,r=>{throw 0!==e[o]&&(e[o]=void 0),r});i=Promise.race([i,new Promise(r=>a=e[o]=[r])]),s.push(a[1]=i)}},onmessage=async e=>{const{fibonacci:r}=await t.e(129).then(t.bind(t,129)),o=JSON.parse(e.data);postMessage(`fib(${o}) = ${r(o)}`)};
+var e={};const o={};function t(s){const r=o[s];if(void 0!==r)return r.exports;const n=o[s]={exports:{}};return e[s](n,n.exports,t),n.exports}t.m=e,t.d=(e,o)=>{for(var s in o)t.o(o,s)&&!t.o(e,s)&&Object.defineProperty(e,s,{enumerable:!0,get:o[s]})},t.f={},t.e=e=>Promise.all(Object.keys(t.f).reduce((o,s)=>(t.f[s](e,o),o),[])),t.u=e=>e+".js",t.o=(e,o)=>Object.prototype.hasOwnProperty.call(e,o),t.p="/dist/",(()=>{const e={721:0},o=o=>{let{__webpack_esm_ids__:s,__webpack_esm_modules__:r,__webpack_esm_runtime__:n}=o;var i,a,c=0;for(i in r)t.o(r,i)&&(t.m[i]=r[i]);for(n&&n(t);c<s.length;c++)a=s[c],t.o(e,a)&&e[a]&&e[a][0](),e[s[c]]=0};t.f.j=(s,r)=>{let n=t.o(e,s)?e[s]:void 0;if(0!==n)if(n)r.push(n[1]);else{let i=import(t.p+t.u(s)).then(o,o=>{throw 0!==e[s]&&(e[s]=void 0),o});i=Promise.race([i,new Promise(o=>n=e[s]=[o])]),r.push(n[1]=i)}}})(),onmessage=async e=>{const{fibonacci:o}=await t.e(129).then(t.bind(t,129)),s=JSON.parse(e.data);postMessage(`fib(${s}) = ${o(s)}`)};
 ```
 
 # dist/129.js
@@ -859,9 +859,9 @@ function fibonacci(n) {
 ## Unoptimized
 
 ```
-asset main.js 9.08 KiB [emitted] [javascript module] (name: main)
-asset chat.js 6.99 KiB [emitted] [javascript module] (name: chat)
-asset workers/fibonacci.js 6.63 KiB [emitted] [javascript module] (name: fibonacci)
+asset main.js 9.09 KiB [emitted] [javascript module] (name: main)
+asset chat.js 7 KiB [emitted] [javascript module] (name: chat)
+asset workers/fibonacci.js 6.64 KiB [emitted] [javascript module] (name: fibonacci)
 asset 936.js 1.04 KiB [emitted] [javascript module]
 asset 129.js 881 bytes [emitted] [javascript module]
 chunk (runtime: 9a81d90cfd0dfd13d748, main) 129.js 103 bytes [rendered]
@@ -904,9 +904,9 @@ webpack X.X.X compiled successfully
 ## Production mode
 
 ```
-asset main.js 2.36 KiB [emitted] [javascript module] [minimized] (name: main)
-asset chat.js 1.08 KiB [emitted] [javascript module] [minimized] (name: chat)
-asset workers/fibonacci.js 951 bytes [emitted] [javascript module] [minimized] (name: fibonacci)
+asset main.js 2.38 KiB [emitted] [javascript module] [minimized] (name: main)
+asset chat.js 1.11 KiB [emitted] [javascript module] [minimized] (name: chat)
+asset workers/fibonacci.js 976 bytes [emitted] [javascript module] [minimized] (name: fibonacci)
 asset 936.js 225 bytes [emitted] [javascript module] [minimized]
 asset 129.js 199 bytes [emitted] [javascript module] [minimized]
 chunk (runtime: 9a81d90cfd0dfd13d748, main) 129.js 103 bytes [rendered]
