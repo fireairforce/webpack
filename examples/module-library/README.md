@@ -32,7 +32,7 @@ export function reset() {
 
 ```javascript
 /******/ // The require scope
-/******/ var __webpack_require__ = {};
+/******/ const __webpack_require__ = {};
 /******/ 
 ```
 
@@ -74,7 +74,7 @@ export function reset() {
 </details>
 
 ``` js
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 /*!********************************!*\
   !*** ./example.js + 2 modules ***!
   \********************************/
