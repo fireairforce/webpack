@@ -68,7 +68,7 @@ module.exports = config;
 # dist/dll.js
 
 ```javascript
-var dll_de97a008841ac4853060;
+var dll_2cf68907f2f250f2b08f;
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ([
 /* 0 */
@@ -150,17 +150,17 @@ exports.c = "c";
 ``` js
 /************************************************************************/
 /******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	const __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
 /******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
@@ -169,7 +169,7 @@ exports.c = "c";
 /******/ 		// Execute the module function
 /******/ 		if (!(moduleId in __webpack_modules__)) {
 /******/ 			delete __webpack_module_cache__[moduleId];
-/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
 /******/ 			e.code = 'MODULE_NOT_FOUND';
 /******/ 			throw e;
 /******/ 		}
@@ -218,8 +218,8 @@ exports.c = "c";
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module doesn't tell about it's top-level declarations so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__(0);
-/******/ 	dll_de97a008841ac4853060 = __webpack_exports__;
+/******/ 	let __webpack_exports__ = __webpack_require__(0);
+/******/ 	dll_2cf68907f2f250f2b08f = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;
@@ -228,7 +228,7 @@ exports.c = "c";
 # dist/dll-manifest.json
 
 ```javascript
-{"name":"dll_de97a008841ac4853060","content":{"./example.js":{"id":1,"buildMeta":{"exportsType":"namespace"},"exports":["a","b","c"]}}}
+{"name":"dll_2cf68907f2f250f2b08f","content":{"./example.js":{"id":1,"buildMeta":{"exportsType":"namespace"},"exports":["a","b","c"]}}}
 ```
 
 # Info
@@ -236,7 +236,7 @@ exports.c = "c";
 ## Unoptimized
 
 ```
-asset dll.js 4.89 KiB [emitted] (name: dll)
+asset dll.js 4.9 KiB [emitted] (name: dll)
 chunk (runtime: dll) dll.js (dll) 211 bytes (javascript) 670 bytes (runtime) [entry] [rendered]
   > dll
   runtime modules 670 bytes 3 modules
@@ -251,7 +251,7 @@ webpack X.X.X compiled successfully
 ## Production mode
 
 ```
-asset dll.js 685 bytes [emitted] [minimized] (name: dll)
+asset dll.js 695 bytes [emitted] [minimized] (name: dll)
 chunk (runtime: dll) dll.js (dll) 211 bytes (javascript) 670 bytes (runtime) [entry] [rendered]
   > dll
   runtime modules 670 bytes 3 modules

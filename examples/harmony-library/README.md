@@ -36,7 +36,7 @@ module.exports = config;
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	const __webpack_require__ = {};
 /******/ 	
 ```
 
@@ -78,7 +78,7 @@ return /******/ (() => { // webpackBootstrap
 </details>
 
 ``` js
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 /*!********************!*\
   !*** ./example.js ***!
   \********************/
@@ -126,7 +126,7 @@ webpack X.X.X compiled successfully
 ## Production mode
 
 ```
-asset MyLibrary.umd.js 672 bytes [emitted] [minimized] (name: main)
+asset MyLibrary.umd.js 678 bytes [emitted] [minimized] (name: main)
 chunk (runtime: main) MyLibrary.umd.js (main) 92 bytes (javascript) 670 bytes (runtime) [entry] [rendered]
   > ./example main
   runtime modules 670 bytes 3 modules
